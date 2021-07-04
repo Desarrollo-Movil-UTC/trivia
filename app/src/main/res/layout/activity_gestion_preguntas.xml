@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GestionPreguntasActivity">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#304b92"
+      android:fillViewport="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="531dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="15dp"
+          android:text="Registra la Pregunta"
+          android:textAlignment="center"
+          android:textColor="#FFFF"
+          android:textSize="34sp"
+          android:textStyle="bold" />
+
+      <EditText
+          android:id="@+id/txtPreguntaRegistro"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:background="@drawable/texto_form"
+          android:drawablePadding="12dp"
+          android:ems="10"
+          android:hint="Pregunta"
+          android:inputType="textPersonName|textCapCharacters"
+          android:paddingLeft="20sp"
+          android:textColor="#6E7692"
+          android:textColorHint="#6E7692"
+          android:textSize="22sp" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="14dp" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="30dp"
+          android:text="Respuesta"
+          android:textAlignment="center"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp"
+          android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="match_parent"
+          android:layout_height="14dp" />
+
+      <RadioGroup
+          android:layout_width="match_parent"
+          android:layout_height="100dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verdadero"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Falso"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+      </RadioGroup>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="69dp"
+          android:orientation="horizontal"
+          android:padding="5dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#5cc4eb"
+            android:drawableLeft="@drawable/ic_baseline_save"
+            android:text="Guardar "
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:iconPadding="2dp" />
+
+        <TextView
+            android:id="@+id/textView122"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#eb5c5b"
+            android:drawableLeft="@drawable/ic_baseline_cancel"
+            android:text="Cancelar"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
+            app:iconPadding="2dp" />
+
+      </LinearLayout>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="9dp" />
+
+      <ListView
+          android:layout_width="match_parent"
+          android:layout_height="253dp" />
+
+      <TextView
+          android:id="@+id/textView10"
+          android:layout_width="match_parent"
+          android:layout_height="10dp" />
+
+      <Button
+          android:id="@+id/button4"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:backgroundTint="#87d469"
+          android:drawableLeft="?attr/homeAsUpIndicator"
+          android:text="Salir"
+          android:textColor="#FFFF"
+          android:textSize="20sp"
+          app:cornerRadius="20dp"
+          app:iconPadding="2dp" />
+
+    </LinearLayout>
+
+  </ScrollView>
+  </androidx.constraintlayout.widget.ConstraintLayout>
