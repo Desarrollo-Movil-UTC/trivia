@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ResultadosActivity extends AppCompatActivity {
+    //definicion de variables
+    String id,nombre,apellido;// variables para capturar valores que vienen cmo parametro
     int puntajeFinal=0;
 
     @Override
@@ -19,12 +21,16 @@ public class ResultadosActivity extends AppCompatActivity {
         Bundle parametrosExtra=getIntent().getExtras(); //capturando los parametros que vienen de la activiad anterior
         if(parametrosExtra!=null){
             try{
-                puntajeFinal=parametrosExtra.getInt("puntuacion");
+                //intente realizar estas lineas de codigo:
+                id = parametrosExtra.getString("id");
+                nombre = parametrosExtra.getString("nombre");
+                apellido = parametrosExtra.getString("apellido");
+                puntajeFinal=parametrosExtra.getInt("puntuacion"); //esta es de tipo Int
             }catch (Exception ex){
                 Toast.makeText(getApplicationContext(),"Error "+ex.toString(),Toast.LENGTH_LONG).show();
             }
         }
-        Toast.makeText(getApplicationContext(),"PUNTAJE OBTENIDO: "+puntajeFinal,Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"PUNTAJE OBTENIDO: "+id+nombre+apellido+puntajeFinal,Toast.LENGTH_LONG).show();
 
     }
 
