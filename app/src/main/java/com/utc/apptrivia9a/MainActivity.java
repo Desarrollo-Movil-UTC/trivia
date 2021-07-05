@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     //actividad para pregunta 1
     public void registrarJugador(View Vista){
         //creando un objeto para ponder manejar la ventana de registo
-        Intent ventanaRegistroJugador=new Intent(getApplicationContext(),RegistrarJugadorActivity.class);
+        Intent ventanaRegistroJugador=new Intent(getApplicationContext(),Pregunta1Activity.class);
         startActivity(ventanaRegistroJugador);
     }
 

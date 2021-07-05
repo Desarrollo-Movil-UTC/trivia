@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C7CDD1"
+        android:background="#304b92"
         android:fillViewport="true"
         android:padding="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,13 +23,51 @@
             android:orientation="vertical"
             tools:layout_editor_absoluleX="145dp">
 
-            <TextView
+            <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="67dp"
+                android:layout_height="96dp"
+                app:srcCompat="@drawable/logo1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="238dp"
+                    android:layout_height="67dp"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="Pregunta N°"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNumeroPregunta"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:gravity="center"
+                    android:hint="#"
+                    android:padding="10sp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtPregunta"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
                 android:gravity="center"
                 android:padding="10sp"
-                android:text="Pregunta N°1"
-                android:textSize="34sp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -37,41 +75,10 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10sp"
-                android:text="El aprendisaje supervisado es  un modelo de aprendisaje automático donde un modelo se ajusta a las observaciones"
-                android:textSize="20sp"
+                android:text="Tiempo"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="8dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:layout_width="166dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#4CAF50"
-                    android:onClick="responderMal"
-                    android:text="Verdadero" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:layout_width="180dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:backgroundTint="#E91E63"
-                    android:onClick="responderBien"
-                    android:text="Falso" />
-
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/txtCronometroPregunta1"
@@ -83,6 +90,50 @@
                 android:textIsSelectable="true"
                 android:textSize="48sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10sp"
+                android:text="Selecciona tu respuesta"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#87d469"
+                android:onClick="respondioVerdadero"
+                android:paddingTop="0sp"
+                android:text="Verdadero"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#eb5c5b"
+                android:onClick="respondioFalso"
+                android:paddingTop="0sp"
+                android:paddingBottom="0sp"
+                android:text="Falso"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:cornerRadius="20dp" />
 
 
         </LinearLayout>

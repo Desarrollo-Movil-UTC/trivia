@@ -61,6 +61,7 @@
                 android:layout_height="50dp"
                 android:backgroundTint="#87d469"
                 android:drawableLeft="?attr/homeAsUpIndicator"
+                android:onClick="salirVentana"
                 android:text="Salir"
                 android:textColor="#FFFF"
                 android:textSize="20sp"

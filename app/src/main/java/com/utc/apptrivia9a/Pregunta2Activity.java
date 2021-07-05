@@ -69,7 +69,7 @@ public class Pregunta2Activity extends AppCompatActivity {
         //abrir la siguiente pregunta
         Intent ventanaResultados = new Intent(getApplicationContext(),Pregunta2Activity.class);
         //pasando la puntuacion como parametro ->se asigna 0 debido a que respondio mal
-        ventanaResultados.putExtra("puntuación", puntuacionAcumulada); startActivity(ventanaResultados); //abrimos la resultados
+        ventanaResultados.putExtra("puntuacion", puntuacionAcumulada); startActivity(ventanaResultados); //abrimos la resultados
         cronometro.cancel();//detener el cronometro.
 
     }
