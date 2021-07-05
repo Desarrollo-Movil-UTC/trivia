@@ -40,9 +40,9 @@ public class GestionPreguntasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gestion_preguntas);
         //mapeo de elementos
         txtPreguntaRegistro= (EditText)findViewById(R.id.txtPreguntaRegistro);
-        respuestaVerdadero = (RadioButton)findViewById(R.id.radioButtonVerdadero);
-        respuestaFalso = (RadioButton)findViewById(R.id.radioButtonFalso);
-        listPreguntas = (ListView) findViewById(R.id.listPreguntas);
+        respuestaVerdadero = (RadioButton)findViewById(R.id.radioButtonVerdaderoEditar);
+        respuestaFalso = (RadioButton)findViewById(R.id.radioButtonFalsoEditar);
+        listPreguntas = (ListView) findViewById(R.id.listJugadores);
         //instanciar /construir la base de datos en el objeto mi bdd
         miBdd = new BaseDatos(getApplicationContext());
 

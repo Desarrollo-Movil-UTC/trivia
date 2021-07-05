@@ -71,7 +71,7 @@
           android:layout_height="100dp">
 
         <RadioButton
-            android:id="@+id/radioButtonVerdadero"
+            android:id="@+id/radioButtonVerdaderoEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Verdadero"
@@ -79,7 +79,7 @@
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/radioButtonFalso"
+            android:id="@+id/radioButtonFalsoEditar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Falso"
@@ -131,7 +131,7 @@
           android:layout_height="9dp" />
 
       <ListView
-          android:id="@+id/listPreguntas"
+          android:id="@+id/listJugadores"
           android:layout_width="match_parent"
           android:layout_height="253dp" />
 
