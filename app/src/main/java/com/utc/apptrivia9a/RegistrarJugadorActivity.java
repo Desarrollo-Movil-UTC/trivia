@@ -29,8 +29,8 @@ public class RegistrarJugadorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_jugador);
 
         //mapeo de elementos
-        txtNombresRegistro= (EditText)findViewById(R.id.txtPreguntaRegistro);
-        txtApellidosRegistro=(EditText)findViewById(R.id.txtRespuestaRegistro);
+        txtNombresRegistro= (EditText)findViewById(R.id.txtNombreRegistro);
+        txtApellidosRegistro=(EditText)findViewById(R.id.txtApellidoRegistro);
         miBdd= new BaseDatos(getApplicationContext()); //instanciar /construir la base de datos en el objeto mi bdd
 
 

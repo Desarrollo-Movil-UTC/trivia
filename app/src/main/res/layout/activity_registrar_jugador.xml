@@ -44,7 +44,7 @@
           android:layout_height="14dp" />
 
       <EditText
-          android:id="@+id/txtPreguntaRegistro"
+          android:id="@+id/txtNombreRegistro"
           android:layout_width="match_parent"
           android:layout_height="60dp"
           android:background="@drawable/texto_form"
@@ -62,7 +62,7 @@
           android:layout_height="14dp" />
 
       <EditText
-          android:id="@+id/txtRespuestaRegistro"
+          android:id="@+id/txtApellidoRegistro"
           android:layout_width="match_parent"
           android:layout_height="60dp"
           android:background="@drawable/texto_form"

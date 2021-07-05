@@ -71,7 +71,7 @@
           android:layout_height="100dp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonVerdadero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Verdadero"
@@ -79,7 +79,7 @@
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonFalso"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Falso"
@@ -99,6 +99,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#5cc4eb"
             android:drawableLeft="@drawable/ic_baseline_save"
+            android:onClick="registrarPregunta"
             android:text="Guardar "
             android:textColor="#FFFFFF"
             android:textSize="18sp"
@@ -116,6 +117,7 @@
             android:layout_height="match_parent"
             android:backgroundTint="#eb5c5b"
             android:drawableLeft="@drawable/ic_baseline_cancel"
+            android:onClick="LimpiarRegistroPregunta"
             android:text="Cancelar"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
@@ -129,6 +131,7 @@
           android:layout_height="9dp" />
 
       <ListView
+          android:id="@+id/listPreguntas"
           android:layout_width="match_parent"
           android:layout_height="253dp" />
 
@@ -144,6 +147,7 @@
           android:layout_height="50dp"
           android:backgroundTint="#87d469"
           android:drawableLeft="?attr/homeAsUpIndicator"
+          android:onClick="salirRegistroPregunta"
           android:text="Salir"
           android:textColor="#FFFF"
           android:textSize="20sp"
