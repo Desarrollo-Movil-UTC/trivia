@@ -43,7 +43,7 @@
                 android:layout_height="169dp"
                 android:gravity="center"
                 android:padding="10sp"
-                android:text="A continuación se presenta un cuestionario que permitira evidenciar su conocimiento relacionado con la Inteligéncia Artificial"
+                android:text="A continuación se presenta un cuestionario que permitirá evidenciar su conocimiento relacionado con Inteligencia Artificial"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"

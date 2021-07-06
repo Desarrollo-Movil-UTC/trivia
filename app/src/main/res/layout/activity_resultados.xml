@@ -7,4 +7,168 @@
     android:layout_height="match_parent"
     tools:context=".ResultadosActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#304b92">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20sp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="501dp"
+          android:gravity="center_horizontal"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <TextView
+            android:id="@+id/txtMensajeResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mensaje"
+            android:textAlignment="center"
+            android:textColor="#FFFF"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imagenResultados"
+            android:layout_width="match_parent"
+            android:layout_height="229dp"
+            android:background="#304b92" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtNombreJugadorResultados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nombre completo"
+            android:textAlignment="center"
+            android:textColor="#FFFF"
+            android:textSize="34sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtPuntajeFinalResultados"
+            android:layout_width="207dp"
+            android:layout_height="54dp"
+            android:padding="5sp"
+            android:text="puntos"
+            android:textAlignment="center"
+            android:textColor="#FFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="339dp"
+          android:layout_height="111dp"
+          android:background="@drawable/texto_form"
+          android:gravity="clip_vertical"
+          android:orientation="vertical"
+          android:padding="20sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/textView13"
+              android:layout_width="125dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="Respuestas Correctas:"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/txtCorrectosResultados"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="TextView"
+              android:textColor="#574343"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/textView15"
+              android:layout_width="125dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="Respuestas Incorrectas:"
+              android:textSize="16sp"
+              android:textStyle="bold" />
+
+          <TextView
+              android:id="@+id/txtIncorrectosResultados"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="TextView"
+              android:textColor="#574343"
+              android:textSize="16sp" />
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#87d469"
+            android:drawableLeft="?attr/homeAsUpIndicator"
+            android:onClick="salirVentanaResultados"
+            android:text="Salir"
+            android:textColor="#FFFF"
+            android:textSize="20sp"
+            app:cornerRadius="20dp"
+            app:iconPadding="2dp" />
+      </LinearLayout>
+    </LinearLayout>
+  </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

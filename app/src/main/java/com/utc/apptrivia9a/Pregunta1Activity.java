@@ -35,6 +35,9 @@ public class Pregunta1Activity extends AppCompatActivity {
     BaseDatos miBdd;// creando un objeto para acceder a los procesos de la BDD SQlite
     Integer numeroPregunta= 0;
     int puntuacionAcumulada = 0; //para ir sumando respuestas
+
+    //para respuestas correctas e incorrectas
+    int correctas=0, incorrectas=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,8 +67,6 @@ public class Pregunta1Activity extends AppCompatActivity {
         mostrarpregunta(0);
         cronometroBajada();
     }
-
-
 
     public void consultarPreguntas() {
         preguntasObtenidas = miBdd.obtenerPreguntas(); //consultando cursos y guardandolos en un cursor
@@ -115,9 +116,11 @@ public class Pregunta1Activity extends AppCompatActivity {
     public void respondioVerdadero(View vista){
         if (respuesta.equals("Verdadero")){
             puntuacionAcumulada = puntuacionAcumulada+1;
-            Toast.makeText(getApplicationContext(), "Bien echo", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Bien echo", Toast.LENGTH_LONG).show();
+            correctas = correctas+1;
         }else{
-            Toast.makeText(getApplicationContext(), "mal", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "mal", Toast.LENGTH_LONG).show();
+            incorrectas = incorrectas+1;
         }
         cronometro.cancel();//detener el cronometro.
         numeroPregunta=numeroPregunta+1;
@@ -132,9 +135,11 @@ public class Pregunta1Activity extends AppCompatActivity {
     public void respondioFalso(View vista){
         if (respuesta.equals("Falso")){
             puntuacionAcumulada = puntuacionAcumulada+1;
-            Toast.makeText(getApplicationContext(), "Bien echo", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Bien echo", Toast.LENGTH_LONG).show();
+            correctas = correctas+1;
         }else{
-            Toast.makeText(getApplicationContext(), "mal", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "mal", Toast.LENGTH_LONG).show();
+            incorrectas = incorrectas+1;
         }
         cronometro.cancel();//detener el cronometro.
         numeroPregunta=numeroPregunta+1;
@@ -153,6 +158,10 @@ public class Pregunta1Activity extends AppCompatActivity {
         ventanaResultados.putExtra("nombre", nombre);
         ventanaResultados.putExtra("apellido", apellido);
         ventanaResultados.putExtra("puntuacion",puntuacionAcumulada);
+
+        ventanaResultados.putExtra("resp_correctas",correctas);
+        ventanaResultados.putExtra("resp_incorrectas",incorrectas);
+
         actualizarpuntuacion();
         startActivity(ventanaResultados); //abrimos la resultados
         finish();
@@ -160,7 +169,7 @@ public class Pregunta1Activity extends AppCompatActivity {
 
     public  void actualizarpuntuacion(){
         miBdd.actualizarUsuario(nombre,apellido,puntuacionAcumulada,id); //modificando en la tabla cliente respecto al id
-        Toast.makeText(getApplicationContext(),"Datos guardados",Toast.LENGTH_LONG).show(); //presentando un mensaje de confirmacion
+        Toast.makeText(getApplicationContext(),"Puntuación guardada",Toast.LENGTH_SHORT).show(); //presentando un mensaje de confirmacion
     }
 
 
