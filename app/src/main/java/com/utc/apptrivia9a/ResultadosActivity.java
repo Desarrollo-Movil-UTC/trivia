@@ -56,26 +56,26 @@ public class ResultadosActivity extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(),"PUNTAJE OBTENIDO: "+id+nombre+apellido+puntajeFinal,Toast.LENGTH_LONG).show();
 
         String nombreCompleto = nombre+" "+apellido;
-        if (puntajeFinal == 9 && puntajeFinal == 10){
+        if (correctas >= 9 && correctas <= 10){
             txtMensajeResultados.setText("LO HICISTE EXCELENTE");
             imagenResultados.setImageResource(R.drawable.excelente);
             txtNombreJugadorResultados.setText(nombreCompleto);
             txtPuntajeFinalResultados.setText("Puntos: "+puntajeFinal);
             //txtPuntajeFinalResultados.setBackgroundResource(R.color.design_default_color_on_secondary);
         } else{
-            if (puntajeFinal == 7 && puntajeFinal == 8){ //bueno
+            if (correctas >= 7 && correctas <= 8){ //bueno
                 txtMensajeResultados.setText("LO HICISTE BIEN");
                 imagenResultados.setImageResource(R.drawable.muy_bien);
                 txtNombreJugadorResultados.setText(nombreCompleto);
                 txtPuntajeFinalResultados.setText("Puntos: "+puntajeFinal);
             } else{
-                if (puntajeFinal == 5 && puntajeFinal == 6){ //mala
+                if (correctas >= 5 && correctas <= 6){ //mala
                     txtMensajeResultados.setText("LO HICISTE MAL");
                     imagenResultados.setImageResource(R.drawable.mal);
                     txtNombreJugadorResultados.setText(nombreCompleto);
                     txtPuntajeFinalResultados.setText("Puntos: "+puntajeFinal);
                 } else{
-                    if (puntajeFinal <5 && puntajeFinal >=0){ //menor a 5
+                    if (correctas <5 && correctas >=0){ //menor a 5
                         txtMensajeResultados.setText("FALLASTE");
                         imagenResultados.setImageResource(R.drawable.menos5);
                         txtNombreJugadorResultados.setText(nombreCompleto);

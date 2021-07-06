@@ -43,18 +43,18 @@
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="35dp" />
 
         <ImageView
             android:id="@+id/imagenResultados"
-            android:layout_width="match_parent"
-            android:layout_height="229dp"
-            android:background="#304b92" />
+            android:layout_width="248dp"
+            android:layout_height="215dp"
+            android:background="@drawable/texto_form" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="31dp" />
 
         <TextView
             android:id="@+id/txtNombreJugadorResultados"
