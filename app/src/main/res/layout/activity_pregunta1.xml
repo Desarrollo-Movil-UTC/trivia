@@ -109,7 +109,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="54dp"
                 android:backgroundTint="#87d469"
                 android:onClick="respondioVerdadero"
                 android:paddingTop="0sp"
@@ -125,7 +125,7 @@
             <Button
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="54dp"
                 android:backgroundTint="#eb5c5b"
                 android:onClick="respondioFalso"
                 android:paddingTop="0sp"
