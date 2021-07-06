@@ -18,17 +18,27 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    BaseDatos miBdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        miBdd = new BaseDatos(getApplicationContext());
     }
 
     //actividad para pregunta 1
     public void registrarJugador(View Vista){
-        //creando un objeto para ponder manejar la ventana de registo
-        Intent ventanaRegistroJugador=new Intent(getApplicationContext(),RegistrarJugadorActivity.class);
-        startActivity(ventanaRegistroJugador);
+        int cont = miBdd.contarPreguntas();
+        if(cont>=10){
+            //creando un objeto para ponder manejar la ventana de registo
+            Intent ventanaRegistroJugador=new Intent(getApplicationContext(),RegistrarJugadorActivity.class);
+            startActivity(ventanaRegistroJugador);
+        }
+        else{
+            Toast.makeText(this, "El numero de preguntas debe ser mayor a 10",Toast.LENGTH_LONG).show();
+        }
+
     }
 
     public void salir (View vista){

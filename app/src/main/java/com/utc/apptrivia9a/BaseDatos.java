@@ -155,6 +155,26 @@ public class BaseDatos extends SQLiteOpenHelper {
         return false; // se retorna falso cuando no existe la base de datos
     }
 
+    //Metodo para contar preguntas existentes en la base ded datos
+    public int contarPreguntas(){
+        SQLiteDatabase miBdd = getWritableDatabase(); //objeto para manejar la base de datos
+        //consultando los productos en la base de datos y contarlos
+        int contador=miBdd.rawQuery("select * from pregunta;",null).getCount();
+        miBdd.close();
+        //retornar el valor contado
+        return contador;
+    }
+
+    public boolean eliminarJugador(String id){
+        SQLiteDatabase miBdd = getWritableDatabase(); // objeto para manejar la base de datos
+        if(miBdd != null){ //validando que la bdd realmente exista
+            miBdd.execSQL("delete from usuario where id_usu="+id); //ejecucion de la sentencia Sql para eliminar
+            miBdd.close();
+            return true; // //retornamos verdero ya que el proceso de eliminacion fue exitoso
+        }
+        return false; // se retorna falso cuando no existe la base de datos
+    }
+
 
 
 }
