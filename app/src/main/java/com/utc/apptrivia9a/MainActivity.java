@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(ventanaRegistroJugador);
         }
         else{
-            Toast.makeText(this, "El numero de preguntas debe ser mayor a 10",Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "El numero de preguntas debe ser mayor a 10 por favor registra mas preguntas",Toast.LENGTH_LONG).show();
         }
 
     }

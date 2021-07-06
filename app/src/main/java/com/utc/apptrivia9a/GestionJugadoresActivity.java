@@ -80,7 +80,7 @@ public class GestionJugadoresActivity extends AppCompatActivity {
     public void eliminarJugador(View vista){
         AlertDialog.Builder estructuraConfirmacion = new AlertDialog.Builder(this)
                 .setTitle("CONFIRMACIÓN")
-                .setMessage("¿Está seguro de eliminar el producto seleccionado?")
+                .setMessage("¿Está seguro de eliminar el jugador seleccionado?")
                 .setPositiveButton("Si, Eliminar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
