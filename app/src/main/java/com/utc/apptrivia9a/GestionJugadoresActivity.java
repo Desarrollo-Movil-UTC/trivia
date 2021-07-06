@@ -2,10 +2,13 @@ package com.utc.apptrivia9a;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ public class GestionJugadoresActivity extends AppCompatActivity {
     ArrayList<String> listaJugadores = new ArrayList<>(); //cargar los datos de la BDD
     //declaracion global
     Cursor jugadoresObtenidos;
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,12 @@ public class GestionJugadoresActivity extends AppCompatActivity {
         //instanciar /construir la base de datos en el objeto mi bdd
         miBdd = new BaseDatos(getApplicationContext());
         consultarJugadores(); //invoca al metodo de listar las preguntas que ya esten registradas
+        listJugadores.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                eliminarJugador(null);
+            }
+        });
     }
 
     public void consultarJugadores() {
@@ -43,7 +53,7 @@ public class GestionJugadoresActivity extends AppCompatActivity {
         if (jugadoresObtenidos != null) { //verificando que realmente haya datos dentro de SQLite
             //proceso cuando si se encuentren cursos almacenados en la BDD
             do {
-                String id = jugadoresObtenidos.getString(0).toString();
+                id = jugadoresObtenidos.getString(0).toString();
                 String nombre = jugadoresObtenidos.getString(1).toString();
                 String apellido = jugadoresObtenidos.getString(2).toString();
                 String puntuacion = jugadoresObtenidos.getString(3).toString();
@@ -66,6 +76,30 @@ public class GestionJugadoresActivity extends AppCompatActivity {
         Intent ventanaIniciar = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(ventanaIniciar);
         finish(); //cerrando la activity
+    }
+    public void eliminarJugador(View vista){
+        AlertDialog.Builder estructuraConfirmacion = new AlertDialog.Builder(this)
+                .setTitle("CONFIRMACIÓN")
+                .setMessage("¿Está seguro de eliminar el producto seleccionado?")
+                .setPositiveButton("Si, Eliminar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //id viene de las variables declaradas que contiene el putExtra
+                        miBdd.eliminarJugador(id); //procesa la eliminacion con base al id del productp
+                        Toast.makeText(getApplicationContext(), "Eliminacion existosa",Toast.LENGTH_SHORT).show();
+                        consultarJugadores();
+                    }
+                })
+                .setNegativeButton("No, cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(), "Eliminacion cancelada",Toast.LENGTH_SHORT).show();
+
+                    }
+                }).setCancelable(true); //es posible que se pueda cancelar el proceso
+        //construir el cuadro de dialogo
+        AlertDialog cuadroDialogo = estructuraConfirmacion.create();
+        cuadroDialogo.show(); //se presenta en pantalla
     }
 
 }
